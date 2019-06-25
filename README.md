@@ -8,6 +8,8 @@ Status bar with character position:
 
 \!\[Character position\]\(images/char-pos.png\)
 
+Counts spaces, \n and \t characters, but not \r characters since they are replaced with the empty string while counting.
+
 ## Requirements
 
 Not at the moment

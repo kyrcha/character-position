@@ -58,13 +58,16 @@ function updateStatusBarItem() {
 function getCharacterPosition(editor) {
 	let line = editor.selections[0].active.line
 	let character = editor.selections[0].active.character
+	// Get the contents from the start of the file till the cursor position
 	let contents = editor.document.getText(new vscode.Range(new vscode.Position(0,0), new vscode.Position(line, character)))
+	// Start at 1
 	let position = 1
-	let lines = contents.split("\n")
+	let lines = contents.split('\n')
 	for(const line of lines) {
-		position += line.length
+		let newline = line.replace("\r", "")
+		position += newline.length + 1 // add one character for each line 
 	}
-	return position
+	return position - 1 // remove the + 1 that was added from the last line
 }
 
 exports.activate = activate;
