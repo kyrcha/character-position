@@ -6,7 +6,7 @@ This extension adds a status bar entry showing the character number at the posit
 
 Status bar with character position:
 
-\!\[Character position\]\(images/char-pos.png\)
+![Character position](images/char-pos.png)
 
 Counts spaces, \n and \t characters, but not \r characters since they are replaced with the empty string while counting.
 
