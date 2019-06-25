@@ -4,6 +4,7 @@
 	"publisher": "kyrcha",
 	"description": "Display character position in files",
 	"version": "1.0.0",
+	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.35.0"
 	},
